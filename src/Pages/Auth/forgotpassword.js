@@ -3,10 +3,14 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-
+// Example Link
+import { Link } from "react-router-dom";
+// ...
+<Link to="/forgot-password">Forgot Password?</Link>
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  
 
   const toastOptions = {
     position: "bottom-right",
@@ -25,7 +29,7 @@ const ForgotPassword = () => {
 
     try {
       const { data } = await axios.post(
-        "https://expense-tracker-app-knl1.onrender.com/api/auth/forgot-password",
+        "http://localhost:5000/api/auth/forgotPassword",
         { email }
       );
 

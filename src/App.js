@@ -9,7 +9,6 @@ import Home from './Pages/Home/Home';
 import SetAvatar from './Pages/Avatar/setAvatar';
 
 
-
 const App = () => {
   return (
     
@@ -20,6 +19,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/setAvatar" element={<SetAvatar />} />
+        
         </Routes>
       </BrowserRouter>
       </div>
